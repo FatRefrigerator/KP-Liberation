@@ -28,7 +28,7 @@ class RscTitles {
             w = 0.4 * safezoneW;
             y = 0.65 * safezoneH + safezoneY;
             h = 0.1 * safezoneH;
-            text = "[GREUH] and the Killah Potatoes present";
+            text = "FatRefrigerator Presents";
             shadow = 1;
         };
         class GenericLabelShadow: GenericLabel2 {
@@ -54,7 +54,7 @@ class RscTitles {
             x = 0.325 * safezoneW + safezoneX;
             w = 0.35 * safezoneW;
             y = 0.2 * safezoneH + safezoneY;
-            h = 0.6 * safezoneH;
+            h = 0.4 * safezoneH;
             text = "res\splash_libe2.paa";
         };
         class VersionLabel {

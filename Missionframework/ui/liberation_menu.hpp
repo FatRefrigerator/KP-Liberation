@@ -15,7 +15,7 @@ class liberation_menu {
         x = 0.08 * safezoneW + safezoneX;
         w = 0.25 * safezoneW;
         y = 0.15 * safezoneH + safezoneY;
-        h = 0.43 * safezoneH;
+        h = 0.25 * safezoneH;
         text = "res\splash_libe2.paa";
     };
     class Start {

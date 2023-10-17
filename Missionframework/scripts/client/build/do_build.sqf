@@ -64,7 +64,7 @@ while { true } do {
                 if(_idx == 0) then { _unitrank = "sergeant"; };
                 if(_idx == 1) then { _unitrank = "corporal"; };
                 if (_classname isEqualTo blufor_squad_para) then {
-                    _x createUnit [_pos, _grp,"this addMPEventHandler [""MPKilled"", {_this spawn kill_manager}]; removeBackpackGlobal this; this addBackpackGlobal ""B_parachute""", 0.5, _unitrank];
+                    _x createUnit [_pos, _grp,"this addMPEventHandler [""MPKilled"", {_this spawn kill_manager}]; removeBackpackGlobal this; this addBackpackGlobal ""B_SPE_US_QAC""", 0.5, _unitrank];
                 } else {
                     _x createUnit [_pos, _grp,"this addMPEventHandler [""MPKilled"", {_this spawn kill_manager}];", 0.5, _unitrank];
                 };

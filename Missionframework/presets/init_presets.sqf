@@ -91,12 +91,12 @@ switch (KP_liberation_preset_civilians) do {
 
 // Prices for the blufor infantry squads (supplies, ammo, fuel)
 KPLIB_b_allSquads = [
-    [blufor_squad_inf_light,200,0,0],
-    [blufor_squad_inf,300,0,0],
-    [blufor_squad_at,200,250,0],
-    [blufor_squad_aa,200,250,0],
-    [blufor_squad_recon,250,0,0],
-    [blufor_squad_para,200,0,0]
+    [blufor_squad_inf_light,50,0,0],
+    [blufor_squad_inf,50,0,0],
+    [blufor_squad_at,100,0,0],
+    [blufor_squad_aa,100,0,0],
+    [blufor_squad_recon,150,0,0],
+    [blufor_squad_para,100,0,0]
 ];
 
 // Squad names for build menu
@@ -159,7 +159,44 @@ GRLIB_ignore_colisions_when_building = [
     "B_Mortar_01_F",                                                    // Mk6 Mortar
     "ACE_friesAnchorBar",                                               // ACE FRIES
     "ACE_friesGantryReverse",                                           // ACE FRIES
-    "ACE_friesGantry"                                                   // ACE FRIES
+    "ACE_friesGantry",                                                   // ACE FRIES
+    "Land_SPE_BarbedWire_04",
+    "Land_SPE_BarbedWire_03",
+    "Land_SPE_BarbedWire_02",
+    "Land_SPE_BarbedWire_01",
+    "Land_SPE_BarbedWire_Posts",
+    "Land_SPE_BarbedWire_End",
+    "Land_SPE_Netting_01",
+    "Land_SPE_Netting_02",
+    "Land_SPE_Dugout_3m",
+    "Land_SPE_Dugout_3m_sandbags",
+    "Land_SPE_Dugout_6m",
+    "Land_SPE_Dugout_6m315",
+    "Land_SPE_Dugout_6m315_sandbags",
+    "Land_SPE_Dugout_6m45",
+    "Land_SPE_Dugout_6m45_sandbags",
+    "Land_SPE_Dugout_6m_sandbags",
+    "Land_SPE_Dugout_Cover",
+    "Land_SPE_Dugout_Pile_01",
+    "Land_SPE_Dugout_Pile_02",
+    "Land_SPE_Guardbox",
+    "Land_SPE_HedgeHog",
+    "Land_SPE_US_Tent",
+    "Land_SPE_Sandbag_Curve",
+    "Land_SPE_Sandbag_Gun_Hole",
+    "Land_SPE_Sandbag_Long",
+    "Land_SPE_Sandbag_Long_Line",
+    "Land_SPE_Sandbag_Long_Thick",
+    "Land_SPE_Sandbag_Nest",
+    "Land_SPE_Sandbag_Short",
+    "Land_SPE_Sandbag_Short_Low",
+    "Land_SPE_Sandbag_Single",
+    "Land_SPE_Tent_03",
+    "Land_SPE_Tent_01",
+    "Land_SPE_StreetLamp",
+    "Land_SPE_StreetLamp_pole",
+    "Land_SPE_US_Lamp",
+    "Land_SPE_OnionLamp"
 ];
 
 /*
@@ -313,12 +350,12 @@ KPLIB_typeAirClasses   = +KPLIB_b_air_classes;
 } forEach (KPLIB_b_support_classes + [toLower huron_typename]);
 
 // Military alphabet used for FOBs and convois
-military_alphabet = ["Alpha", "Bravo", "Charlie", "Delta", "Echo", "Foxtrot", "Golf", "Hotel", "India", "Juliet", "Kilo", "Lima", "Mike", "November", "Oscar", "Papa", "Quebec", "Romeo", "Sierra", "Tango", "Uniform", "Victor", "Whiskey", "X-Ray", "Yankee", "Zulu"];
+military_alphabet = ["Able", "Baker", "Charlie", "Dog", "Easy", "Fox", "George", "How", "Item", "Jig", "King", "Love", "Mike", "Nan", "Oboe", "Peter", "Queen", "Roger", "Sugar", "Tare", "Uncle", "Victor", "William", "X-Ray", "Yoke", "Zulu"];
 
 // Misc variables
 markers_reset = [99999,99999,0];
 zeropos = [0,0,0];
-KPLIB_sarWreck = "Land_Wreck_Heli_Attack_01_F";
+KPLIB_sarWreck = "SPE_P47_MRWreck";
 KPLIB_sarFire = "test_EmptyObjectForFireBig";
 
 KPLIB_initPresets = true;
