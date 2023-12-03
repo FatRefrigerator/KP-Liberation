@@ -16,7 +16,7 @@ FOB_typename = "Land_vn_hootch_02_03";                                  // This 
 FOB_box_typename = "B_Slingload_01_Cargo_F";                            // This is the FOB as a container. (Land_vn_cargo20_military_green_f could be usable when it is slingloadable.
 FOB_truck_typename = "vn_b_wheeled_m54_03";                             // This is the FOB as a vehicle.
 Arsenal_typename = "Land_vn_us_weapons_stack2";                         // This is the virtual arsenal as portable supply crates.
-Respawn_truck_typename = "vn_b_wheeled_m54_01_airport";                 // This is the mobile respawn (and medical) truck. (Not medical or optimal but at least less emersion breaking that HEMTT)
+Respawn_truck_typename = "vn_b_armor_m577_01";                 // This is the mobile respawn (and medical) truck. (armored m113 variant, hence ammo cost of 40, Dirt Ranger Ambulance could also work)
 huron_typename = "vn_b_air_ch34_01_01";                                 // This is Spartan 01, a multipurpose mobile respawn as a helicopter.
 crewman_classname = "vn_b_men_army_14";                                 // This defines the crew for vehicles.
 pilot_classname = "vn_b_men_aircrew_05";                                // This defines the pilot for helicopters.
@@ -298,7 +298,7 @@ buildings = [
 
 support_vehicles = [
     [Arsenal_typename,100,200,0],
-    [Respawn_truck_typename,200,0,100],
+    [Respawn_truck_typename,200,40,100],
     [FOB_box_typename,300,500,0],
     [FOB_truck_typename,300,500,75],
     [KP_liberation_small_storage_building,0,0,0],
