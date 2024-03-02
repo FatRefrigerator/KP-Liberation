@@ -32,7 +32,7 @@ KPLIB_objectInits = [
 
     // Add helipads to zeus, as they can't be recycled after built
     [
-        ["Helipad_base_F", "LAND_uns_Heli_pad", "Helipad", "LAND_uns_evac_pad", "LAND_uns_Heli_H"],
+        ["Helipad_base_F", "LAND_uns_Heli_pad", "Helipad", "LAND_uns_evac_pad", "LAND_uns_Heli_H", "Land_vn_b_helipad_01", "Land_vn_helipadcircle_f", "Land_vn_helipadcivil_f", "Land_vn_helipadrescue_f", "Land_vn_helipadsquare_f", "Land_vn_jumptarget_f"],
         {{[_x, [[_this], true]] remoteExecCall ["addCuratorEditableObjects", 2]} forEach allCurators;},
         true
     ],

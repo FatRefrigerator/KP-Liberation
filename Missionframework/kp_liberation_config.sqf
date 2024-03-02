@@ -53,7 +53,26 @@ KP_liberation_medical_vehicles = [
     "uns_M577_amb",
     "uns_uh1D_med",
     "vn_b_air_uh1d_01_01",
-    "vn_b_wheeled_m54_repair_airport"
+    "vn_b_wheeled_m54_repair_airport",
+    "vn_b_armor_m577_01",
+    "vn_b_armor_m577_02",
+    "vn_b_air_ch47_02_01",
+    "vn_b_air_ch47_03_01",
+    "vn_b_wheeled_lr2a_03_nz_army",
+    "vn_b_wheeled_lr2a_03_aus_army",
+    "vn_b_air_uh1d_01_01",
+    "vn_b_air_uh1d_01_02",
+    "vn_b_air_uh1d_01_03",
+    "vn_b_air_uh1d_01_04",
+    "vn_b_air_uh1d_01_05",
+    "vn_b_air_uh1d_01_06",
+    "vn_b_air_uh1d_01_07",
+    "vn_b_air_uh1b_01_01",
+    "vn_b_air_uh1b_01_02",
+    "vn_b_air_uh1b_01_03",
+    "vn_b_air_uh1b_01_04",
+    "vn_b_air_uh1b_01_05",
+    "vn_b_air_uh1b_01_06"
 ];
 
 // Building classnames which also function as ACE medical facilities.
@@ -198,9 +217,9 @@ KP_liberation_arsenal = 17;
 Time in minutes till a full tank depletes whilst the vehicle is standing still with a running engine. */
 KP_liberation_fuel_neutral = 120;
 // Time in minutes till a full tank depletes whilst the vehicle is driving below max speed.
-KP_liberation_fuel_normal = 75;
+KP_liberation_fuel_normal = 90;
 // Time in minutes till a full tank depletes whilst the vehicle is driving at max speed.
-KP_liberation_fuel_max = 45;
+KP_liberation_fuel_max = 60;
 
 /* - Gameplay constant settings.
 Name of the savegame namespace inside of the [ServerProfileName].vars.Arma3Profile file. */
@@ -905,7 +924,13 @@ vehicle_refuel_sources = [
     "uns_M113_ENG",
     "uns_M35A2_fuel",
     "uns_M35A2_fueltanker",
-    "vn_b_wheeled_m54_fuel"
+    "vn_b_wheeled_m54_fuel",
+    "Land_vn_b_prop_fuelbladder_01",
+    "Land_vn_b_prop_fuelbladder_02",
+    "Land_vn_b_prop_fuelbladder_03",
+    "Land_vn_b_prop_fuelbladder_04",
+    "Land_vn_usaf_fueltank_75_01",
+    "Land_vn_b_prop_fueldrum_01"
 ];
 
 // Classnames of boats, so they can be built on water.
@@ -1066,13 +1091,16 @@ KP_liberation_suppMod_artyVeh = [
     "uns_M30_107mm_mortar",
     "uns_Type55_mortar",
     "vn_b_army_static_mortar_m2",
-    "vn_b_army_static_mortar_m29"
+    "vn_b_army_static_mortar_m29",
+    "vn_b_army_static_m101_02",
+    "vn_b_armor_m125_01"
 ];
 
 // Objects which are spawned as intel objects for pickup
 KPLIB_intelObjectClasses = [
     "Land_File_research_F",
-    "Land_Document_01_F"
+    "Land_Document_01_F",
+    "Land_vn_file2_f"
 ];
 
 // Classnames of buildings inside military sectors, which are valid to hold intel items
@@ -1092,7 +1120,13 @@ KPLIB_intelBuildingClasses = [
     "Land_MilOffices_V1_F",
     "Land_Research_house_V1_F",
     "Land_Research_HQ_F",
-    "Land_u_Barracks_V2_F"
+    "Land_u_Barracks_V2_F",
+    "Land_vn_barracks_03_04",
+    "Land_vn_hootch_01_03",
+    "Land_vn_hootch_02_03",
+    "Land_vn_house_big_03_f",
+    "Land_vn_b_trench_bunker_03_04",
+    "Land_vn_hotel_02_f"
 ];
 
 // Large storage area placement position offsets.
