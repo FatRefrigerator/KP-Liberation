@@ -42,30 +42,30 @@ KP_liberation_fuel_crate = "CargoNet_01_barrels_F";                     // This 
     IMPORTANT: The last element inside each array must have no comma at the end!
 */
 infantry_units = [
-    ["vn_b_men_army_09",15,0,0],                                        // Rifleman (Light)
-    ["vn_b_men_army_15",15,0,0],                                        // Rifleman
-    ["vn_b_men_army_12",20,5,0],                                        // Rifleman (AT)
-    ["vn_b_men_army_07",20,0,0],                                        // Grenadier
-    ["vn_b_men_army_06",20,0,0],                                        // Autorifleman
-    ["vn_b_men_army_10",20,0,0],                                        // Marksman
-    ["vn_b_men_army_11",20,0,0],                                        // Sharpshooter
-    ["vn_b_men_army_03",20,0,0],                                        // Combat Life Saver
-    ["vn_b_men_army_04",20,0,0],                                        // Engineer
-    ["vn_b_men_army_05",20,0,0],                                        // Explosives Specialist
-    ["vn_b_men_sf_04",25,0,0],                                          // Recon Scout
-    ["vn_b_men_sf_21",25,0,0],                                          // Recon Marksman
-    ["vn_b_men_sf_02",25,0,0],                                          // Recon Paramedic
-    ["vn_b_men_sf_03",25,0,0],                                          // Recon Demolition Expert
-    ["vn_b_men_sf_11",25,0,0],                                          // Recon Grenadier
-    ["vn_b_men_sf_05",25,0,0],                                          // Recon Machinegunner
-    ["vn_b_men_army_13",10,0,0],                                        // Crewman
-    ["vn_b_men_army_16",20,0,0],                                        // Para Trooper
-    ["vn_b_men_aircrew_06",10,0,0],                                     // Helicopter Crew
-    ["vn_b_men_aircrew_05",10,0,0],                                     // Helicopter Pilot
-    ["vn_b_men_jetpilot_01",10,0,0],                                    // Pilot
-    ["vn_b_men_seal_30",15,0,0],                                        // Diver 3
-    ["vn_b_men_seal_32",15,0,0],                                        // Diver 5
-    ["vn_b_men_seal_36",15,0,0]                                         // Diver 9
+    ["vn_b_men_army_09",10,0,0],                                        // Rifleman (Light)
+    ["vn_b_men_army_15",10,0,0],                                        // Rifleman
+    ["vn_b_men_army_12",15,5,0],                                        // Rifleman (AT)
+    ["vn_b_men_army_07",15,0,0],                                        // Grenadier
+    ["vn_b_men_army_06",15,0,0],                                        // Autorifleman
+    ["vn_b_men_army_10",15,0,0],                                        // Marksman
+    ["vn_b_men_army_11",15,0,0],                                        // Sharpshooter
+    ["vn_b_men_army_03",15,0,0],                                        // Combat Life Saver
+    ["vn_b_men_army_04",15,0,0],                                        // Engineer
+    ["vn_b_men_army_05",15,0,0],                                        // Explosives Specialist
+    ["vn_b_men_sf_04",20,0,0],                                          // Recon Scout
+    ["vn_b_men_sf_21",20,0,0],                                          // Recon Marksman
+    ["vn_b_men_sf_02",20,0,0],                                          // Recon Paramedic
+    ["vn_b_men_sf_03",20,0,0],                                          // Recon Demolition Expert
+    ["vn_b_men_sf_11",20,0,0],                                          // Recon Grenadier
+    ["vn_b_men_sf_05",20,0,0],                                          // Recon Machinegunner
+    ["vn_b_men_army_13",5,0,0],                                        // Crewman
+    ["vn_b_men_army_16",15,0,0],                                        // Para Trooper
+    ["vn_b_men_aircrew_06",5,0,0],                                     // Helicopter Crew
+    ["vn_b_men_aircrew_05",5,0,0],                                     // Helicopter Pilot
+    ["vn_b_men_jetpilot_01",5,0,0],                                    // Pilot
+    ["vn_b_men_seal_30",10,0,0],                                        // Diver 3
+    ["vn_b_men_seal_32",10,0,0],                                        // Diver 5
+    ["vn_b_men_seal_36",10,0,0]                                         // Diver 9
 ];
 
 light_vehicles = [
@@ -91,13 +91,13 @@ light_vehicles = [
 ];
 
 heavy_vehicles = [
-    ["vn_b_armor_m113_acav_04",100,60,75],                             // M113A1 ACAV (M134)
-    ["vn_b_armor_m113_acav_02",100,60,75],                             // M113A1 ACAV (M1919)
-    ["vn_b_armor_m113_acav_01",100,60,75],                             // M113A1 ACAV (M2)
-    ["vn_b_armor_m113_acav_06",100,125,75],                            // M113A1 ACAV (M2/M40)
-    ["vn_b_armor_m113_acav_05",100,75,75],                             // M113A1 ACAV (Mk18)
-    ["vn_b_armor_m125_01",100,175,75],                                 // M125A1 M29 Mortar
-    ["vn_b_armor_m132_01",100,100,125],                                 // M132A1 Flamethrower
+    ["vn_b_armor_m113_acav_04",75,60,100],                             // M113A1 ACAV (M134)
+    ["vn_b_armor_m113_acav_02",75,60,100],                             // M113A1 ACAV (M1919)
+    ["vn_b_armor_m113_acav_01",75,60,100],                             // M113A1 ACAV (M2)
+    ["vn_b_armor_m113_acav_06",75,125,100],                            // M113A1 ACAV (M2/M40)
+    ["vn_b_armor_m113_acav_05",75,75,100],                             // M113A1 ACAV (Mk18)
+    ["vn_b_armor_m125_01",75,175,100],                                 // M125A1 M29 Mortar
+    ["vn_b_armor_m132_01",75,100,150],                                 // M132A1 Flamethrower
     ["SPE_M4A1_75",250,350,300],                                        // M4A1 Sherman (Spearhead DLC)
     ["SPE_M18_Hellcat",150,400,250],                                    // M18 Hellcat (Spearhead DLC)
     ["vn_b_armor_m41_01_01",200,450,250],                               // M41A3 Walker Bulldog

@@ -17,6 +17,7 @@ switch (KP_liberation_arsenal) do {
     case  15: {[] call compileFinal preprocessFileLineNumbers "arsenal_presets\vanilla_aaf.sqf";};
     case  16: {[] call compileFinal preprocessFileLineNumbers "arsenal_presets\vanilla_ldf.sqf";};
     case  17: {[] call compileFinal preprocessFileLineNumbers "arsenal_presets\vn.sqf";};
+    case  18: {[] call compileFinal preprocessFileLineNumbers "arsenal_presets\optre.sqf";};
     default  {GRLIB_arsenal_weapons = [];GRLIB_arsenal_magazines = [];GRLIB_arsenal_items = [];GRLIB_arsenal_backpacks = [];};
 };
 
@@ -57,6 +58,7 @@ execVM "scripts\client\markers\spot_timer.sqf";
 execVM "scripts\client\misc\broadcast_squad_colors.sqf";
 execVM "scripts\client\misc\init_arsenal.sqf";
 execVM "scripts\client\misc\permissions_warning.sqf";
+execVM "scripts\client\misc\ODST_Support.sqf";
 if (!KP_liberation_ace) then {execVM "scripts\client\misc\resupply_manager.sqf";};
 execVM "scripts\client\misc\secondary_jip.sqf";
 execVM "scripts\client\misc\synchronise_vars.sqf";

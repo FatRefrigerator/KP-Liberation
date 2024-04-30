@@ -15,6 +15,8 @@ KP_liberation_supplies = 0;
 KP_liberation_ammo = 0;
 KP_liberation_fuel = 0;
 KP_liberation_air_vehicle_building_near = false;
+KP_liberation_spartan_building_near = false;
+KP_liberation_ODST_building_near = false;
 KP_liberation_recycle_building_near = false;
 
 waitUntil { !isNil "synchro_done" };
@@ -59,7 +61,7 @@ while {true} do {
         _showResources = true;
 
         private _nearestFob = player getVariable "KPLIB_fobPos";
-        ([_nearestFob] call KPLIB_fnc_getFobResources) params ["", "_supplies", "_ammo", "_fuel", "_hasAir", "_hasRecycling"];
+        ([_nearestFob] call KPLIB_fnc_getFobResources) params ["", "_supplies", "_ammo", "_fuel", "_hasAir", "_hasSpartan", "_hasODST", "_hasRecycling"];
 
         if (KP_liberation_resources_global || {_visibleMap}) then {
             // Overwrite FOB name in global mode
@@ -75,6 +77,8 @@ while {true} do {
         };
         // TODO this is used by build scripts, move to relevant places
         KP_liberation_air_vehicle_building_near = _hasAir;
+        KP_liberation_spartan_building_near = _hasSpartan;
+        KP_liberation_ODST_building_near = _hasODST;
         KP_liberation_recycle_building_near = _hasRecycling;
     } else {
         _showResources = false;
@@ -82,6 +86,8 @@ while {true} do {
         KP_liberation_ammo = 0;
         KP_liberation_fuel = 0;
         KP_liberation_air_vehicle_building_near = false;
+        KP_liberation_spartan_building_near = false;
+        KP_liberation_ODST_building_near = false;
         KP_liberation_recycle_building_near = false;
     };
 

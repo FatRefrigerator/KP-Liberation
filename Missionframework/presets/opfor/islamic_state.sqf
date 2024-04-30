@@ -158,3 +158,7 @@ opfor_air = [
     "RHS_Su25SM_vvsc",                                                  // Su-25
     "RHS_Su25SM_KH29_vvsc"                                              // Su-25 (KH29)
 ];
+
+opfor_boat = [
+    
+];

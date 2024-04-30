@@ -66,6 +66,7 @@ class KPLIB {
         class isClassUAV                {};
         class isRadio                   {};
         class log                       {};
+        class lambs_enableReinforcements{};
         class potatoScan                {};
         class protectObject             {};
         class secondsToTimer            {};
