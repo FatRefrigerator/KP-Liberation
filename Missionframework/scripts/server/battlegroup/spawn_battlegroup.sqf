@@ -28,18 +28,17 @@ if !(_spawn_marker isEqualTo "") then {
 
         // Adjust target size for infantry
         _target_size = 12 max (_target_size * 4);
-
-        // Create infantry groups with up to 8 units per squad
-        private _grp = createGroup [GRLIB_side_enemy, true];
-        for "_i" from 0 to (_target_size - 1) do {
-            if (_i > 0 && {(_i % 8) isEqualTo 0}) then {
-                _bg_groups pushBack _grp;
-                _grp = createGroup [GRLIB_side_enemy, true];
+        private _squadNumber = round (_target_size/8);
+        for "_i" from 1 to _squadNumber do {
+            // Create infantry groups with up to 8 units per squad
+            private _grp = createGroup [KPLIB_side_enemy, true];
+            for "_i" from 0 to 7 do {
+                [selectRandom _infClasses, markerPos _spawn_marker, _grp] call KPLIB_fnc_createManagedUnit;;
             };
-            [selectRandom _infClasses, markerPos _spawn_marker, _grp] call KPLIB_fnc_createManagedUnit;
+            [_grp] call KPLIB_fnc_LAMBS_enableReinforcements;
+            [_grp] call battlegroup_ai;
+            _grp setVariable ["KPLIB_isBattleGroup",true];
         };
-        [_grp] spawn battlegroup_ai;
-        _bg_groups pushBack _grp;
     } else {
         private _vehicle_pool = [opfor_battlegroup_vehicles, opfor_battlegroup_vehicles_low_intensity] select (combat_readiness < 50);
 
@@ -55,7 +54,8 @@ if !(_spawn_marker isEqualTo "") then {
             sleep 0.5;
 
             (crew _vehicle) joinSilent _nextgrp;
-            [_nextgrp] spawn battlegroup_ai;
+            [_nextgrp] call battlegroup_ai;
+            _nextgrp setVariable ["KPLIB_isBattleGroup", true];
             _bg_groups pushback _nextgrp;
 
             if ((_x in opfor_troup_transports) && ([] call KPLIB_fnc_getOpforCap < GRLIB_battlegroup_cap)) then {

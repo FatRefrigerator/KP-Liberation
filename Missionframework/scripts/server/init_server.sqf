@@ -137,3 +137,12 @@ execVM "scripts\server\offloading\group_diag.sqf";
 if (KP_liberation_restart > 0) then {
     execVM "scripts\server\game\server_restart.sqf";
 };
+
+
+["KPLIB_ResetBattleGroups", {
+    {
+        if (_x getVariable ["KPLIB_isBattleGroup", false]) then {
+            [_x] call battlegroup_ai;
+        }
+    } foreach allGroups;
+}] call CBA_fnc_addEventHandler;
