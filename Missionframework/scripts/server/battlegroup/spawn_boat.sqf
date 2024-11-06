@@ -33,43 +33,20 @@ sleep 1;
 {_x doFollow leader _grp} forEach (units _grp);
 sleep 1;
 
-private _posFound = false;
-private _randomPos = [];
 private _boatWaypoint = [];
-private _waterDepth = 0;
+private _waypoint = [];
 
 //create waypoints for boats
 for "_i" from 1 to 6 do{
-    _searchCounter = 0;
-        while {!_posFound} do
-        {
-            _randomPos - [];
-            //counter because there are cases where there will be water near an objective but none will be deep enough
-            //most boats can drive in 1m of water, but i have it set to 3m since that will keep waypoints from being put super close to shore
-            _searchCounter = _searchCounter + 1;
-            
-            if(_searchCounter isEqualTo 20) then {break};
 
-            _randomPos = [_first_objective,1,300,0,2] call BIS_fnc_findSafePos;
-            
-            if(_randomPos distance _first_objective > 500) then {break};
-            
-            _boatWaypoint = _randomPos;
-            _randomPos pushBack 0;
-            _waterDepth = ASLToATL _randomPos select 2;
- 
-            if (!(_waterDepth < 3)) then
-            {
-                _posFound = true;
-            };
-        };
+    _boatWaypoint = [_first_objective] call KPLIB_fnc_getBoatWaypoints;
+
     if(_boatWaypoint isEqualTo []) then {break};
     _waypoint = _grp addWaypoint [_boatWaypoint, 1];
     _waypoint setWayPointType "SAD";
-    _posFound = false;
 };
 //if there's no suitable waypoints for the boat, get rid of it
-if (((_randomPos distance _first_objective) > 500) || (_waterDepth < 2)) exitWith {
+if (_waypoint isEqualTo []) exitWith {
     {deleteVehicle _x} forEach units _grp;
     {deleteVehicle _x} forEach _boats;
     deleteGroup _grp;
