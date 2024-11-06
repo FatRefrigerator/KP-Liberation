@@ -2,6 +2,7 @@
 params ["_first_objective"];
 
 if (KPLIB_o_boats isEqualTo []) exitWith {false};
+if (KPLIB_sectors_boatSpawn isEqualTo[]) exitWith {false};
 
 private _boats_number = ((floor linearConversion [25, 100, KPLIB_enemyReadiness, 1, 2]) min 2) max 0;
 
@@ -44,7 +45,7 @@ for "_i" from 1 to 6 do{
         {
             _randomPos - [];
             //counter because there are cases where there will be water near an objective but none will be deep enough
-            //most boats can drive in 1m of water, but i have it set to 2m since that will keep waypoints from being put super close to shore
+            //most boats can drive in 1m of water, but i have it set to 3m since that will keep waypoints from being put super close to shore
             _searchCounter = _searchCounter + 1;
             
             if(_searchCounter isEqualTo 20) then {break};
@@ -55,12 +56,9 @@ for "_i" from 1 to 6 do{
             
             _boatWaypoint = _randomPos;
             _randomPos pushBack 0;
-            //this literally just makes a rock that tells me how deep the water is
-            _depthRock = createSimpleObject ["Land_Cliff_stone_small_F",_randomPos];
-            _waterDepth = getPosATL _depthRock select 2;
-            //RIP rock
-            deleteVehicle _depthRock;
-            if (!(_waterDepth < 2)) then
+            _waterDepth = ASLToATL _randomPos select 2;
+ 
+            if (!(_waterDepth < 3)) then
             {
                 _posFound = true;
             };
