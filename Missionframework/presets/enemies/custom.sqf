@@ -152,4 +152,4 @@ KPLIB_o_planes = [
 
 KPLIB_o_boats = [
     "O_Boat_Armed_01_hmg_F"                                             // Speedboat HMG
-]
+];
