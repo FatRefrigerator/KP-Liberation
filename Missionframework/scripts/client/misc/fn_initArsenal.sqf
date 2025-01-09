@@ -67,12 +67,12 @@ if (KPLIB_param_useArsenalPreset) then {
     if !(configProperties [configFile >> "CBA_DisposableLaunchers"] isEqualTo []) then {
         private _disposableLaunchers = ["CBA_FakeLauncherMagazine"];
         {
-            private _loadedLauncher = cba_disposable_LoadedLaunchers getVariable _x;
+            private _loadedLauncher = cba_disposable_LoadedLaunchers get _x;
             if (!isNil "_loadedLauncher") then {
                 _disposableLaunchers pushBack _loadedLauncher;
             };
 
-            private _normalLauncher = cba_disposable_NormalLaunchers getVariable _x;
+            private _normalLauncher = cba_disposable_NormalLaunchers get _x;
             if (!isNil "_normalLauncher") then {
                 _normalLauncher params ["_loadedLauncher"];
                 _disposableLaunchers pushBack _loadedLauncher;
@@ -98,12 +98,12 @@ if (KPLIB_param_useArsenalPreset) then {
         // Handle CBA (MRT) Accessories, https://github.com/CBATeam/CBA_A3/wiki/Accessory-Functions
         private _itemCfg = configFile >> "CfgWeapons" >> _x;
         if (!isNull _itemCfg) then {
-            private _nextItem = getText (_cfg >> "MRT_SwitchItemPrevClass");
+            private _nextItem = getText (_itemCfg >> "MRT_SwitchItemPrevClass");
             if (_nextItem != "") then {
                 KPLIB_arsenalAllowedExtension pushBackUnique _nextItem;
             };
 
-            private _prevItem = getText (_cfg >> "MRT_SwitchItemNextClass");
+            private _prevItem = getText (_itemCfg >> "MRT_SwitchItemNextClass");
             if (_prevItem != "") then {
                 KPLIB_arsenalAllowedExtension pushBackUnique _prevItem;
             };
